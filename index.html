@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a responsividade para dispositivos móveis -->
+  <title>To-Do List</title> <!-- Título da página que aparece na aba do navegador -->
+  <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS com os estilos -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> <!-- Inclusão da biblioteca Font Awesome para ícones -->
+</head>
+<body>
+
+  <header>
+    <h1>Minha To-Do List</h1> <!-- Título principal da aplicação -->
+  </header>
+
+  <section class="todo-container">
+    <button id="open-modal">Adicionar Tarefa</button> <!-- Botão para abrir o modal de adição de tarefas -->
+
+    <div class="status-container">
+      <!-- Seção para diferentes listas de status das tarefas -->
+      <div class="status" id="tarefas">
+        <h2>Tarefas</h2>
+        <ul id="lista-tarefas" class="lista"></ul> <!-- Lista onde as tarefas pendentes serão exibidas -->
+      </div>
+      <div class="status" id="em-andamento">
+        <h2>Em Andamento</h2>
+        <ul id="lista-em-andamento" class="lista"></ul> <!-- Lista para tarefas que estão em andamento -->
+      </div>
+      <div class="status" id="em-revisao">
+        <h2>Em Revisão</h2>
+        <ul id="lista-em-revisao" class="lista"></ul> <!-- Lista para tarefas que estão em revisão -->
+      </div>
+      <div class="status" id="concluido">
+        <h2>Concluído</h2>
+        <ul id="lista-concluido" class="lista"></ul> <!-- Lista para tarefas concluídas -->
+      </div>
+    </div>
+  </section>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span> <!-- Botão para fechar o modal (ícone de "X") -->
+      <h2>Nova Tarefa</h2>
+      <input type="text" id="nova-tarefa" placeholder="Digite sua tarefa..."> <!-- Campo de entrada para nova tarefa -->
+      <label for="data-entrega">Data de Entrega</label>
+      <input type="date" id="data-entrega" placeholder="Data de entrega"> <!-- Campo para selecionar a data de entrega -->
+      <button id="adicionar-tarefa"><i class="fas fa-plus"></i> Adicionar</button> <!-- Botão para adicionar a tarefa com um ícone -->
+    </div>
+  </div>
+
+  <footer>
+    <p>Feito com 💻 por Professora Laryssa</p> <!-- Rodapé com crédito -->
+  </footer>
+
+  <script src="script.js"></script> <!-- Link para o arquivo JavaScript que contém a lógica da aplicação -->
+</body>
+</html>
